@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>User Information</title>
+    <style>
+        body {
+            text-align: center;
+            background-image: url('dog-pattern.png');
+        }
+
+        .input-container {
+            width: 300px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        #userData {
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        function printUserData() {
+            var fullName = document.getElementById("fullName").value;
+            var age = document.getElementById("age").value;
+            var strand = document.getElementById("strand").value;
+
+            var userDataContainer = document.getElementById("userData");
+            userDataContainer.innerHTML = "<div>Full Name: " + fullName + "</div>" +
+                                           "<div>Age: " + age + "</div>" +
+                                           "<div>Strand: " + strand + "</div>";
+        }
+    </script>
+</head>
+<body>
+    <div class="input-container">
+        <h1>User Information</h1>
+        <form>
+            <label for="fullName">Full Name:</label><br>
+            <input type="text" id="fullName" name="fullName"><br>
+
+            <label for="age">Age:</label><br>
+            <input type="number" id="age" name="age"><br>
+
+            <label for="strand">Strand:</label><br>
+            <input type="text" id="strand" name="strand"><br><br>
+
+            <button type="button" onclick="printUserData()">Submit</button>
+        </form>
+
+        <div id="userData"></div>
+    </div>
+</body>
+</html>
